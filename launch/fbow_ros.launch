@@ -1,0 +1,27 @@
+<!--
+	Fast-bag-of-words ROS wrapper.
+-->
+
+<launch>
+
+  <!-- ============ TOPICS =============== -->
+
+  <arg name="camera_topic" value="/t265/undistorted/left/image_raw" />
+  <!--<arg name="camera_topic" value="/camera/color/image_raw" />-->
+
+  <arg name="path_to_voc" value="/home/nek/catkin_ws/src/fbow_ros/vocabularies/orb_mur.fbow" />
+  <!--<arg name="path_to_voc" value="/home/nek/catkin_ws/src/fbow_ros/vocabularies/my_voc_1.fbow" />-->
+
+  <arg name="lower_bound_score" value="0.07" />
+  <arg name="upper_bound_score" value="0.005" />
+
+  <!-- ============ ==== =============== -->
+
+  <!-- Navigation NODE -->
+  <node pkg="fbow_ros" type="fbow_ros_core_node" name="fbow_ros_core_node" output="screen">
+    <param name="camera_topic" value="$(arg camera_topic)" />
+    <param name="path_to_voc" value="$(arg path_to_voc)" />
+  </node>
+
+
+</launch> 

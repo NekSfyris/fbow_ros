@@ -31,8 +31,10 @@ catkin_make
 
 ### Vocabulary
 
-To create your own vocabulary, you have to create a database of images from which the features in the vocabulary will be extracted. 
+To create your own vocabulary, you have to create a database of images from which the features in the vocabulary will be extracted.
+
 In my case, i created a rosbag from a D435 realsense feed (coloured) of an environment, and then converted it to images.
+
 The database of images was then kept at the following folder "~/catkin_ws/src/fbow_ros/voc_images/1".
 
 Then, to create the actual vocabulary we first go to the build folder of the fbow package:

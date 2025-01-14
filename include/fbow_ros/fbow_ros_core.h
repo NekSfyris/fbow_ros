@@ -36,7 +36,6 @@ using namespace std;
 
 
 
-
 namespace fbow_ros {
 
 class FBOW_ROS_Core {
@@ -68,7 +67,7 @@ public:
   double lower_bound_score;//over which we say that we have the same place
   double upper_bound_score;//under which we say that we have a different place
 
-
+  //image stream callback
   void imageCb(const sensor_msgs::ImageConstPtr& img);
 
   void fbow_init();
@@ -101,13 +100,10 @@ public:
   }
 
 
-
-
 private:
 
 
 }; // class
-
 }; // namespace
 
 #endif

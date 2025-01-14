@@ -1,8 +1,7 @@
 #include <fbow_ros/fbow_ros_core.h>
 
-
-
 namespace fbow_ros{
+
 
 FBOW_ROS_Core::FBOW_ROS_Core()
 {
@@ -25,9 +24,7 @@ FBOW_ROS_Core::FBOW_ROS_Core()
 
 
   fbow_init();
-
 }
-
 
 
 //------------------------ Sensor topic callbacks ------------------------//
@@ -62,7 +59,6 @@ void FBOW_ROS_Core::imageCb(const sensor_msgs::ImageConstPtr& img)
     ROS_ERROR("cv_bridge exception: %s", e.what());
     return;
   }
-
 }
 
 
@@ -137,11 +133,8 @@ void FBOW_ROS_Core::fbow_init()
       // Sleep until we need to publish a new measurement.
       rate.sleep();
     }
-
   }
-
 }
-
 
 
 //compute and return the feature descriptos in image
@@ -203,11 +196,9 @@ map<double, int> FBOW_ROS_Core::compareBagOfWords(std::stack<cv::Mat> fdescripto
     } 
 
     cout << endl;
-
   }
 
   return fbow_scores;
-
 }
 
 
@@ -259,24 +250,10 @@ void FBOW_ROS_Core::sortAndCheckFBow(map<double, int> fbow_scores, cv::Mat descr
       cout << "ADDED A NEW PLACE!" << endl;
 
     }
-
   }
-  
-
 }
 
-
-
-
-
-
-
-
-
 };// namespace
-
-
-
 
 
 

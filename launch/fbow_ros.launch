@@ -9,6 +9,7 @@
   <arg name="camera_topic" value="/t265/undistorted/left/image_raw" />
   <!--<arg name="camera_topic" value="/camera/color/image_raw" />-->
 
+  <!-- MAKE SURE TO CHANGE THE PATH TO THE ONE IN YOUR LOCAL MACHINE -->
   <arg name="path_to_voc" value="/home/nek/catkin_ws/src/fbow_ros/vocabularies/orb_mur.fbow" />
   <!--<arg name="path_to_voc" value="/home/nek/catkin_ws/src/fbow_ros/vocabularies/my_voc_1.fbow" />-->
 
